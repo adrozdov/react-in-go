@@ -6,13 +6,13 @@ const HEIGHT = 600;
 
 export default function Game() {
 
-    constructor() {
-        super();
-        this.rows = HEIGHT / CELL_SIZE;
-        this.cols = WIDTH / CELL_SIZE;
+    const rows = HEIGHT / CELL_SIZE;
+    const cols = WIDTH / CELL_SIZE;
+    const board = this.makeEmptyBoard();
 
-        this.board = this.makeEmptyBoard();
-    }
+    const [cells, setCells] = React.useState();
+    const [isRunning, setRunning] = React.useState();
+    const [interval, setInterval] = React.useState();
 
     state = {
         cells: [],
@@ -20,7 +20,7 @@ export default function Game() {
         interval: 100,
     }
 
-    makeEmptyBoard() {
+    const makeEmptyBoard = () => {
         let board = [];
         for (let y = 0; y < this.rows; y++) {
             board[y] = [];

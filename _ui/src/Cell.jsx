@@ -2,9 +2,9 @@ import React from 'react';
 
 const CELL_SIZE = 20;
 
-export default function Cell() {
+export default function Cell(props) {
   
-    const { x, y } = this.props;
+    const { x, y } = props;
     return (
       <div className="Cell" style={{
           left: `${CELL_SIZE * x + 1}px`,
