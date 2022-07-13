@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Game from './Cell';
+import Game from './Game';
 
 export default function App()  {
   
